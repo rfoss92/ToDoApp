@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
-var mLab = "https://api.mlab.com/api/1/databases/foss-todo/collections/todo?apiKey=zdZwEsvwpYnj4S1SXkcwrrePZLgjcsjv"
-var DB = 'mongodb://localhost:27017/TodoApp'
+var mLab = "mongodb://user1:TheFinal78@ds151508.mlab.com:51508/foss-todo"
+var DB = "mongodb://localhost:27017/TodoApp"
 mongoose.Promise = global.Promise;
 // mongoose.connect(process.env.MONGODB_URI);
 
