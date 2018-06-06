@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>To Do App</title>
+  <meta charset="utf-8">
+  <meta name="Description" content="To Do App" />
+  <meta name="Keywords" content="To Do App, Ryan Foss" />
+  <meta name="author" content="Ryan Foss" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <h1>To Do App</h1>
+
+  <p>Create a To Do list</p>
+
+<div class="row">
+  <section class="medium-6">
+
+    <form action="/" id="newForm" method="post" role="form">
+      <input id="new" name="new" placeholder="Enter new list name" maxlength="256" required="" type="text"></input></br>
+      <input id="Submit" value="Submit" type="submit"></input>
+    </form>
+
+     <form action="/" id="retrieveForm" method="post" role="form">
+      <input id="retrieve" name="retrieve" placeholder="Retrieve your list" required="" maxlength="256" type="text"></input></br>
+      <input id="Submit" value="Submit" type="submit"></input>
+    </form>
+
+    <form action="/" id="addForm" method="post" role="form">
+      <input id="add" name="add" placeholder="Add to your list" required="" maxlength="256" type="text"></input></br>
+      <input id="Submit" value="Submit" type="submit"></input>
+    </form>
+
+    <form action="/" id="removeForm" method="post" role="form">
+      <input id="remove" name="remove" placeholder="Remove from your list" required="" maxlength="256" type="text"></input></br>
+      <input id="Submit" value="Submit" type="submit"></input>
+    </form>          
+
+  </section>
+
+  <section class="medium-6">
+
+    <p id="list">{{title}}</p>
+    <ul id="items">
+      {{#each items}}
+      <li>{{ this }}</li>
+      {{/each}}
+    </ul>
+
+  </section>
+</div>
+
+<footer>
+
+    <div id="contactLinks" class="row">
+
+      <div class="col-sm-4" >
+        <a href="https://github.com/rfoss92" target="_blank"><img  id="footerLinkLeft" src="http://www.guibingzhuche.com/data/out/315/1883487.png" /></a>
+      </div>
+
+      <div class="col-sm-4" id="copyright">
+      <a href="\contact"><button>Request A Quote</button></a></br>      
+        © 2018 | Ryan Foss
+      </div> 
+
+      <div class="col-sm-4" >
+        <a href="https://www.linkedin.com/in/ryan-foss-805374107/" target="_blank"><img  id="footerLinkRight" src="https://www.dsgfs.com/wp-content/uploads/2014/11/transparent-Linkedin-logo-icon.png" /></a>
+      </div>
+
+    </div>
+
+</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/js/script.js"></script> 
+
+</body>
+</html>
