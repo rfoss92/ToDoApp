@@ -18,30 +18,28 @@
 
 <body>
 
-  <h1>To Do App</h1>
-
-  <p>Create a To Do list</p>
+  <p>Create a To Do List</p>
 
 <div class="row">
   <section class="medium-6">
 
     <form action="/" id="newForm" method="post" role="form">
-      <input id="new" name="new" placeholder="Enter new list name" maxlength="256" required="" type="text"></input></br>
+      <input id="new" name="new" placeholder="Enter new list" maxlength="256" required="" type="text"></input></br>
       <input id="Submit" value="Submit" type="submit"></input>
     </form>
 
      <form action="/" id="retrieveForm" method="post" role="form">
-      <input id="retrieve" name="retrieve" placeholder="Retrieve your list" required="" maxlength="256" type="text"></input></br>
+      <input id="retrieve" name="retrieve" placeholder="Retrieve list" required="" maxlength="256" type="text"></input></br>
       <input id="Submit" value="Submit" type="submit"></input>
     </form>
 
     <form action="/" id="addForm" method="post" role="form">
-      <input id="add" name="add" placeholder="Add to your list" required="" maxlength="256" type="text"></input></br>
+      <input id="add" name="add" placeholder="Add to list" required="" maxlength="256" type="text"></input></br>
       <input id="Submit" value="Submit" type="submit"></input>
     </form>
 
     <form action="/" id="removeForm" method="post" role="form">
-      <input id="remove" name="remove" placeholder="Remove from your list" required="" maxlength="256" type="text"></input></br>
+      <input id="remove" name="remove" placeholder="Remove from list" required="" maxlength="256" type="text"></input></br>
       <input id="Submit" value="Submit" type="submit"></input>
     </form>          
 
@@ -50,33 +48,28 @@
   <section class="medium-6">
 
     <p id="list">{{title}}</p>
-    <ul id="items">
+    <ol id="items">
       {{#each items}}
       <li>{{ this }}</li>
       {{/each}}
-    </ul>
+    </ol>
 
   </section>
 </div>
 
 <footer>
 
-    <div id="contactLinks" class="row">
+  <div>
+    <a href="https://github.com/rfoss92" target="_blank"><img src="https://diversity.github.com/assets/svg/mark-github.svg" /></a>
 
-      <div class="col-sm-4" >
-        <a href="https://github.com/rfoss92" target="_blank"><img  id="footerLinkLeft" src="http://www.guibingzhuche.com/data/out/315/1883487.png" /></a>
-      </div>
+    <a href="\contact"><button>Request A Quote</button></a>      
 
-      <div class="col-sm-4" id="copyright">
-      <a href="\contact"><button>Request A Quote</button></a></br>      
-        © 2018 | Ryan Foss
-      </div> 
+    <a href="https://www.linkedin.com/in/ryan-foss-805374107/" target="_blank"><img src="https://www.mentorthing.com/auth/assets/img/icons/linkedin.svg" />
+    </a>
 
-      <div class="col-sm-4" >
-        <a href="https://www.linkedin.com/in/ryan-foss-805374107/" target="_blank"><img  id="footerLinkRight" src="https://www.dsgfs.com/wp-content/uploads/2014/11/transparent-Linkedin-logo-icon.png" /></a>
-      </div>
-
-    </div>
+    </br>
+    <section id="copyright">©2018 | Ryan Foss</section> 
+  </div>
 
 </footer>
 
