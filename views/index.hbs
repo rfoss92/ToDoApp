@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<nav class="navbar navbar-inverse navbar-fixed-top container-fluid">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="mailto:rfoss92@gmail.com"><button>Contact</button></a></li>
+    </ul>
+  </div>
+</nav>
+
 <head>
   <title>To Do App</title>
   <meta charset="utf-8">
@@ -12,69 +20,68 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
-  <link rel="stylesheet" type="text/css" href="css/style.css"> 
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
 
 <body>
 
-  <p>Create a To Do List</p>
+  <h1>Create a To Do List</h1>
 
-<div class="row">
-  <section class="medium-6">
+  <div class="row content">
+    <section class="medium-6">
 
-    <form action="/" id="newForm" method="post" role="form">
-      <input id="new" name="new" placeholder="Enter new list" maxlength="256" required="" type="text"></input></br>
-      <input id="Submit" value="Submit" type="submit"></input>
-    </form>
+      <form action="/" id="newForm" method="post" role="form">
+        <input id="new" name="new" placeholder="Create list" maxlength="256"
+          required="" type="text"></input></br>
+        <input id="Submit" value="Submit" type="submit"></input>
+      </form>
 
-     <form action="/" id="retrieveForm" method="post" role="form">
-      <input id="retrieve" name="retrieve" placeholder="Retrieve list" required="" maxlength="256" type="text"></input></br>
-      <input id="Submit" value="Submit" type="submit"></input>
-    </form>
+       <form action="/" id="retrieveForm" method="post" role="form">
+        <input id="retrieve" name="retrieve" placeholder="Retrieve list"
+          required="" maxlength="256" type="text"></input></br>
+        <input id="Submit" value="Submit" type="submit"></input>
+      </form>
 
-    <form action="/" id="addForm" method="post" role="form">
-      <input id="add" name="add" placeholder="Add to list" required="" maxlength="256" type="text"></input></br>
-      <input id="Submit" value="Submit" type="submit"></input>
-    </form>
+      <form action="/" id="addForm" method="post" role="form">
+        <input id="add" name="add" placeholder="Add"
+          required="" maxlength="256" type="text"></input></br>
+        <input id="Submit" value="Submit" type="submit"></input>
+      </form>
 
-    <form action="/" id="removeForm" method="post" role="form">
-      <input id="remove" name="remove" placeholder="Remove from list" required="" maxlength="256" type="text"></input></br>
-      <input id="Submit" value="Submit" type="submit"></input>
-    </form>          
+      <form action="/" id="removeForm" method="post" role="form">
+        <input id="remove" name="remove" placeholder="Remove"
+          required="" maxlength="256" type="text"></input></br>
+        <input id="Submit" value="Submit" type="submit"></input>
+      </form>
 
-  </section>
+    </section>
 
-  <section class="medium-6">
+    <section class="medium-6">
 
-    <p id="list">{{title}}</p>
-    <ol id="items">
-      {{#each items}}
-      <li>{{ this }}</li>
-      {{/each}}
-    </ol>
+      <p id="listName">{{title}}</p>
+      <ol id="items">
+        {{#each items}}
+        <li>{{ this }}</li>
+        {{/each}}
+      </ol>
 
-  </section>
-</div>
-
-<footer>
-
-  <div>
-    <a href="https://github.com/rfoss92" target="_blank"><img src="https://diversity.github.com/assets/svg/mark-github.svg" /></a>
-
-    <a href="\contact"><button>Request A Quote</button></a>      
-
-    <a href="https://www.linkedin.com/in/ryan-foss-805374107/" target="_blank"><img src="https://www.mentorthing.com/auth/assets/img/icons/linkedin.svg" />
-    </a>
-
-    </br>
-    <section id="copyright">©2018 | Ryan Foss</section> 
+    </section>
   </div>
 
-</footer>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="/js/script.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/script.js"></script>
 
 </body>
+  <footer>
+    <div>
+      <a href="https://github.com/rfoss92" target="_blank">
+        <img src="https://diversity.github.com/assets/svg/mark-github.svg" /></a>
+      <a href="https://www.linkedin.com/in/ryan-foss-805374107/" target="_blank">
+        <img src="https://www.mentorthing.com/auth/assets/img/icons/linkedin.svg" />
+      </a>
+      </br>
+      <section id="copyright">© {{getCurrentYear}} | Ryan Foss</section>
+    </div>
+  </footer>
 </html>
