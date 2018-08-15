@@ -8,5 +8,4 @@ mongoose.connect(mLab, {
   useMongoClient: true
 });
 
-
 module.exports = {mongoose};
