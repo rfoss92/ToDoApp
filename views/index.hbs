@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<nav class="navbar navbar-inverse navbar-fixed-top container-fluid">
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
-      <li><a href="mailto:rfoss92@gmail.com"><button>Contact</button></a></li>
-    </ul>
-  </div>
-</nav>
-
 <head>
   <title>To Do App</title>
   <meta charset="utf-8">
@@ -28,36 +20,37 @@
 
   <h1>Create a To Do List</h1>
 
-  <div class="row content">
-    <section class="medium-6">
+  <div class="grid-container content">
+    <section class="grid-item">
 
       <form action="/" id="newForm" method="post" role="form">
+        <button id="Submit" type="submit"><i class="fas fa-pencil-alt"></i></button >
         <input id="new" name="new" placeholder="Create list" maxlength="256"
           required="" type="text"></input></br>
-        <input id="Submit" value="Submit" type="submit"></input>
+        
       </form>
 
        <form action="/" id="retrieveForm" method="post" role="form">
+        <button id="Submit" type="submit"><i class="fa fa-search"></i></button>
         <input id="retrieve" name="retrieve" placeholder="Retrieve list"
           required="" maxlength="256" type="text"></input></br>
-        <input id="Submit" value="Submit" type="submit"></input>
       </form>
 
       <form action="/" id="addForm" method="post" role="form">
+        <button id="Submit" type="submit"><i class="fas fa-plus"></i></button>
         <input id="add" name="add" placeholder="Add"
           required="" maxlength="256" type="text"></input></br>
-        <input id="Submit" value="Submit" type="submit"></input>
       </form>
 
       <form action="/" id="removeForm" method="post" role="form">
+        <button id="Submit" type="submit"><i class="fas fa-minus"></i></button>
         <input id="remove" name="remove" placeholder="Remove"
           required="" maxlength="256" type="text"></input></br>
-        <input id="Submit" value="Submit" type="submit"></input>
       </form>
 
     </section>
 
-    <section class="medium-6">
+    <section class="grid-item">
 
       <p id="listName">{{title}}</p>
       <ol id="items">
@@ -81,7 +74,7 @@
         <img src="https://www.mentorthing.com/auth/assets/img/icons/linkedin.svg" />
       </a>
       </br>
-      <section id="copyright">© {{getCurrentYear}} | Ryan Foss</section>
+      <section id="copyright">© 2018 | Ryan Foss</section>
     </div>
   </footer>
 </html>
